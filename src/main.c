@@ -15,9 +15,10 @@
 #include "generate.h"
 void printInfo();
 
-// Is passed an argument count and an array of arguments.  If no arguments are passed other
-// than the program name, license, description, documentation information is displayed.  
-// Otherwise, the program runs according to which argument it is passed.
+// Is passed an argument count and an array of arguments.  If one of the correct arguments
+// of generate, encrypt, or decrypt is passed, then the program runs according to 
+// the argument that was entered.  Otherwise, license, description, and
+// documentation information is displayed.  
 main(int argc, char *argv[]) 
 { 
   if (argc > 1 && strcmp(argv[1],"generate") == 0) {
