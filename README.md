@@ -3,7 +3,7 @@
 
 This is a C implementation of something similar to the version of RSA taught in CSE 311.  I created it both to learn how to write in C and as an experiment in implementing an encryption algorithm.  The version of RSA used by this program uses an exponent of 3 and uses primes that are too small, rendering it insecure.  It also doesn't have any padding, although I am considering adding this in the future.
 
-
+For more information about the version of RSA used here: http://www.cs.washington.edu/homes/tompa/papers/rsa311.pptx
 
 ## Arguments
 
