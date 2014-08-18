@@ -19,7 +19,7 @@ long checkValue(long input) {
   correct = 1;
   while (prime || correct) {
     if (isPrime(input) == 0 || isCorrectMod(input) == 0) {
-      input = (rand() % 171) + 30;
+      input = (rand() % 500) + 30;
     }
     prime = !isPrime(input);
     correct  = !isCorrectMod(input);
