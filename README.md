@@ -19,16 +19,17 @@ This is a C implementation of something similar to the version of RSA taught in 
 ## Example
 
 	$ ./CryptoProgram generate
-	Public Key: 74ce0603
-	Private Key: 4dddc81b
+	Public Key: 14fb
+	Private Key: d8b
 	$ ./CryptoProgram encrypt
-	Enter Public Key: 74ce0603
+	Enter Public Key: 14fb
 	Enter message to encrypt: Hello, world!
-	5b200 fb89d 1338c0 1338c0 14de4f 14cc0 8000 19b6a7 14de4f 169b48 1338c0 f4240 8c61
-	$ ./CryptoProgram decrypt 5b200 fb89d 1338c0 1338c0 14de4f 14cc0 8000 19b6a7 14de4f 169b48 1338c0 f4240 8c61
-	Enter Public Key: 74ce0603
-	Enter Private Key: 4dddc81b
-	Hello, world!   
+	a59 1158 b52 b52 d45 120b 21e fc4 d45 11a7 b52 3e2 e7f 
+	$ ./CryptoProgram decrypt a59 1158 b52 b52 d45 120b 21e fc4 d45 11a7 b52 3e2 e7f 
+	Enter Public Key: 14fb
+	Enter Private Key: d8b
+	Hello, world!
+ 
 
 
 
