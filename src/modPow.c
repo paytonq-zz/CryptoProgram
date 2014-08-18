@@ -6,7 +6,7 @@ long modPow(long b, long e, long m) {
     long result = 1;
 
     while (e > 0) {
-        if ((e & 1) == 1) {=
+        if ((e & 1) == 1) {
             result = (result * b) % m;
         }
         b = (b * b) % m;

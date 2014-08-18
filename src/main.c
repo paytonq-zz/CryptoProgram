@@ -13,13 +13,25 @@
 #include "decrypt.h"
 #include "encrypt.h"
 #include "generate.h"
+void printInfo();
 
 // Is passed an argument count and an array of arguments.  If no arguments are passed other
 // than the program name, license, description, documentation information is displayed.  
 // Otherwise, the program runs according to which argument it is passed.
 main(int argc, char *argv[]) 
 { 
-  if (argc == 1) {
+  if (argc > 1 && strcmp(argv[1],"generate") == 0) {
+    generate();
+  } else if (argc > 1 && strcmp(argv[1],"encrypt") == 0) {
+    encrypt();
+  } else if (argc > 1 && strcmp(argv[1],"decrypt") == 0) {
+    decrypt(argc, argv);
+  } else {
+    printInfo();
+  }
+}
+
+void printInfo() {
     printf("\nCopyright (c) 2014 Payton Quinn\n\n");
     printf("Permission is hereby granted, free of charge, to any person obtaining a copy \n");
     printf("of this software and associated documentation files (the \"Software\"), to deal \n");
@@ -44,14 +56,4 @@ main(int argc, char *argv[])
     printf("\n\n");
     printf("For documentation and instructions on using this program, please visit \n");
     printf("https://github.com/paytonq/CryptoProgram\n\n");
-  } else {
-    if (strcmp(argv[1],"generate") == 0) {
-      generate();
-    } else if (strcmp(argv[1],"encrypt") == 0) {
-      encrypt();
-    } else if (strcmp(argv[1],"decrypt") == 0) {
-      decrypt(argc, argv);
-    } 
-  }
 }
-
