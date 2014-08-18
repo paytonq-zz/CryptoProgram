@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2014 Payton Quinn
+ * Distributed under the MIT Licnese
+ * (See accompanying file LICENSE or copy at
+ * http://opensource.org/licenses/MIT)
+ */
+
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -6,7 +14,9 @@
 #include "encrypt.h"
 #include "generate.h"
 
-
+// Is passed an argument count and an array of arguments.  If no arguments are passed other
+// than the program name, license, description, documentation information is displayed.  
+// Otherwise, the program runs according to which argument it is passed.
 main(int argc, char *argv[]) 
 { 
   if (argc == 1) {

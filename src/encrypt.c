@@ -1,8 +1,19 @@
+/*
+ * Copyright (c) 2014 Payton Quinn
+ * Distributed under the MIT Licnese
+ * (See accompanying file LICENSE or copy at
+ * http://opensource.org/licenses/MIT)
+ */
+
+
 #include "encrypt.h"
 #include <stdio.h>
 long key;
 int c;
 
+
+// Prompts the user for a public key and plaintext to be encrypted and then
+// encrypts that plaintext using the public key.
 void encrypt() {
   printf("Enter Public Key: ");
   scanf("%lx", &key);

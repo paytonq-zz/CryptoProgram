@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2014 Payton Quinn
+ * Distributed under the MIT Licnese
+ * (See accompanying file LICENSE or copy at
+ * http://opensource.org/licenses/MIT)
+ */
+
+
 #include "modPow.h"
 #include "decrypt.h"
 #include <stdio.h>
@@ -5,6 +13,9 @@ long key1, es, next;
 int i, newInt;
 char newChar;
 
+// Takes an argument count and array of arguments (which include the ciphertext) and then
+// prompts the user for a public and private key.  It then decrypts the ciphertext
+// using the keypair.
 void decrypt(int argc, char *argv[]) {
   if (argc > 2) {
     printf("Enter Public Key: ");

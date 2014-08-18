@@ -1,20 +1,23 @@
+/*
+ * Copyright (c) 2014 Payton Quinn
+ * Distributed under the MIT Licnese
+ * (See accompanying file LICENSE or copy at
+ * http://opensource.org/licenses/MIT)
+ */
+
+
 #include "checkValue.h"
 #include <time.h>
 int prime;
 int correct;
 
+// Verifies that the randomly generated number that it is passed fulfills the criteria 
+// for use in creating a keypair. If it does, it is returned. If it doesn't, a new number 
+// is generated and returned.
 long checkValue(long input) {
   prime = 1;
   correct = 1;
   while (prime || correct) {
-    //if (isPrime(input) == 0) {
-    // printf("The number you have entered is not prime, please try again: ");
-    // scanf("%li",&input); 
-    //} else if (isCorrectMod(input) == 0) {
-      // printf("The prime you have entered mod 3 is not 2, please try again: ");
-      //scanf("%li",&input);
-    
-    // }
     if (isPrime(input) == 0 || isCorrectMod(input) == 0) {
       input = (rand() % 10000) + 36340;
     }
@@ -23,6 +26,8 @@ long checkValue(long input) {
   }
   return input;
 }
+
+// Returns a value indicating whether or not the value passed to it is prime.
 int isPrime(long number) {
   unsigned long num = number;
   if (number <= 1) 
@@ -36,6 +41,8 @@ int isPrime(long number) {
   return 1;
 }
 
+// Returns a value indicating whether or not the value passed to it mod 3
+// equals 2.
 int isCorrectMod(long number) {
   return number % 3 == 2;
 }
