@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Payton Quinn
+ * Copyright (c) 2014, 2015 Payton Quinn
  * Distributed under the MIT License
  * (See accompanying file LICENSE or copy at
  * http://opensource.org/licenses/MIT)
@@ -33,7 +33,7 @@ main(int argc, char *argv[])
 }
 
 void printInfo() {
-    printf("\nCopyright (c) 2014 Payton Quinn\n\n");
+    printf("\nCopyright (c) 2014, 2015 Payton Quinn\n\n");
     printf("Permission is hereby granted, free of charge, to any person obtaining a copy \n");
     printf("of this software and associated documentation files (the \"Software\"), to deal \n");
     printf("in the Software without restriction, including without limitation the rights \n");
